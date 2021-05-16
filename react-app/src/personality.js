@@ -1,7 +1,9 @@
-const Personality = () => {
+
+const Personality = ({data}) => {
     return ( 
         <div>
-            hi :)
+            hi:)
+            {console.log(data)}
         </div>
      );
 }

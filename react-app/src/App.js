@@ -4,14 +4,16 @@ import QuestionsPage from './QuestionsPage';
 import { BrowserRouter as Router, Route, Switch,Redirect } from "react-router-dom";
 import Personality from "./personality";
 import Home from "./home";
+import { useState } from 'react';
 function App() {
+  const [data, setData] = useState();
   return (
     <div className="App">
       <Router>
         <Switch>
         <Route path="/" exact><Home /></Route>
-          <Route path="/test" exact><QuestionsPage /></Route>
-          <Route path="/personality"><Personality /></Route>
+          <Route path="/test" exact ><QuestionsPage nextPageData={setData}/></Route>
+          <Route path="/personality" ><Personality data={data} /></Route>
           <Redirect to="/"/>
         </Switch>
       </Router>

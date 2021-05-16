@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import ques from "./questions";
 import axios from "axios";
-// import Personality from "./personality";
-function QuestionsPage() {
+import { useHistory } from "react-router-dom";
+function QuestionsPage({nextPageData}) {
+	let history = useHistory();
     const questions =ques;
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
-	const [responseData, setResponse] =useState(null);
+	const [responseData, setResponse] =useState([]);
 	// const [score, setScore] = useState(0);
 	const [data, setData] = useState({
         Q1:"",Q2:"",Q3:"",Q4:"",Q5:"",Q6:"",Q7:"",Q8:"",Q9:"",Q10:"",Q11:"",Q12:"",Q13:"",Q14:"",Q15:"",Q16:"",Q17:"",Q18:"",Q19:"",Q20:"",IvsE:"",NvsS:"",TvsF:"",JvsP:"",Result:"",category:""
@@ -76,23 +77,25 @@ function QuestionsPage() {
 					headers: headers
 				}).then((result)=>{
 					console.log(result.data);
-					setResponse(result);
-					return result.data
-				}).then((result)=>{
-					console.log(result);
-					setResponse(result);
+					var val = responseData;
+					val.push(result.data);
+					setResponse(val);
 					console.log(responseData)
 				})
 			}
 
 		}
 	};
+	const nextPage=()=>{
+		nextPageData(responseData);
+		history.push("/personality");
+	}
 	return (
 		<div className='app'>
 			{showScore ? (<>
 				<div className='score-section'>
 					<p>You are an {data.Result} :) </p><br />
-					<button  >Know more {">>"}</button>
+					<button onClick={nextPage}>Know more {">>"}</button>
                    {/* yaha pe result dikha dena */}
 
 				</div>
