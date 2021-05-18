@@ -1,5 +1,6 @@
 const express = require('express')
 var cors = require('cors')
+const path = require("path");
 const mongoose = require("mongoose");
 const User = require("./Models/User");
 const Character = require("./Models/Characters");
@@ -7,17 +8,24 @@ const characterRouter = require("./characterRoute")
 const userRoute = require("./userRoute")
 const addCharacterRouter = require("./addCharacterRoute");
 const app = express();
-
+require("dotenv").config({path :"./config.env"})
+const port = process.env.PORT;
+const dbURI = process.env.MONGOURI;
 app.use(cors()); // to handle cross-origin errors
 app.use(express.urlencoded({extended:true})); // to make sure that we are able to access the request body.
 app.use(express.json()); 
 
-const dbURL = "mongodb+srv://user:user@clusterdev.59ggp.mongodb.net/Project?retryWrites=true&w=majority";
+// if(process.env.NODE_ENV==="production"){
+//     app.use(express.static(path.join(__dirname,"../react-app/build")))
+//     app.get("*",(req,res)=>{
+//         res.sendFile(path.join(__dirname,"../react-app","build","index.html"))
+//     })
+// }
 
-mongoose.connect(dbURL,{useNewUrlParser: true,useUnifiedTopology: true})
+mongoose.connect(dbURI,{useNewUrlParser: true,useUnifiedTopology: true})
 .then((result)=>{
-    app.listen(3002,()=>{
-        console.log("Server is running on port 3002..."); // Server start;
+    app.listen(port,()=>{
+        console.log(`Server is running on port ${port}...`); // Server start;
     });
 }).catch((err)=> console.log(err));
 app.get("/",(req,res)=>{
