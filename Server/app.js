@@ -51,6 +51,10 @@ app.post('/adduser', function (req, res) {
 app.get("/",(req,res,next)=>{
     res.send("hi")
 })
+// app.get("/update",(req,res)=>{
+//     let d=[];
+
+// })
 app.get("/aggregation",(req,res)=>{
     var finaldata={
         data:[],
@@ -227,7 +231,7 @@ app.get("/aggregation",(req,res)=>{
                         res.send(finaldata);
             }).catch(err=> console.log(err));
         })
-})
+    })
 app.get("/addData",(req,res)=>{
     var c = data
     console.log(c.length);
