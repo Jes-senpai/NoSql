@@ -1,5 +1,13 @@
 const ques = [
     {
+        questionText: 'Choose a category',
+        answerOptions: [
+            { answerText: 'Marvel Comics', score: 0 },
+            { answerText: 'DC Comics', score: 0 },
+            { answerText: 'Both', score: 0 }
+        ],
+    },
+    {
         questionText: 'The idea of a blind date makes me shudder',
         answerOptions: [
             { answerText: 'Strongly Agree', score: 5 },

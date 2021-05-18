@@ -3,102 +3,106 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     Q1:{
-        type : String,
+        type : Object,
         require : true
     },
     Q2:{
-        type : String,
+        type : Object,
         require : true
     },
     Q3:{
-        type : String,
+        type : Object,
         require : true
     },
     Q4:{
-        type : String,
+        type : Object,
         require : true
     },
     Q5:{
-        type : String,
+        type : Object,
         require : true
     },
     Q6:{
-        type : String,
+        type : Object,
         require : true
     },
     Q7:{
-        type : String,
+        type : Object,
         require : true
     },
     Q8:{
-        type : String,
+        type : Object,
         require : true
     },
     Q9:{
-        type : String,
+        type : Object,
         require : true
     },
     Q10:{
-        type : String,
+        type : Object,
         require : true
     },
     Q11:{
-        type : String,
+        type : Object,
         require : true
     },
     Q12:{
-        type : String,
+        type : Object,
         require : true
     },
     Q13:{
-        type : String,
+        type : Object,
         require : true
     },
     Q14:{
-        type : String,
+        type : Object,
         require : true
     },
     Q15:{
-        type : String,
+        type : Object,
         require : true
     },
     Q16:{
-        type : String,
+        type : Object,
         require : true
     },
     Q17:{
-        type : String,
+        type : Object,
         require : true
     },
     Q18:{
-        type : String,
+        type : Object,
         require : true
     },
     Q19:{
-        type : String,
+        type : Object,
         require : true
     },
     Q20:{
-        type : String,
+        type : Object,
         require : true
     },
     IvsE:{
-        type : String,
+        type : Object,
         require : true
     },
     NvsS:{
-        type : String,
+        type : Object,
         require : true
     },
     TvsF:{
-        type : String,
+        type : Object,
         require : true
     },
     JvsP:{
-        type : String,
+        type : Object,
         require : true
     },
     Result:{
+        type : Object,
+        require : true
+    },
+    Category:{
         type : String,
         require : true
     }

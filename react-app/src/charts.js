@@ -7,7 +7,7 @@ const Charts = () => {
     const [data,setData] =useState([])
     const [hasError, setHasError] = useState(true)
     useEffect(()=>{
-        axios.get("http://localhost:3002/aggregation")
+        axios.get("http://localhost:3002/character")
         .then((result)=>{
 			console.log(result.data);
             var val=data;
@@ -18,17 +18,16 @@ const Charts = () => {
 		})
     },[data])
     if(hasError){
-        return <>Loading....</>
+        return <div style={{backgroundColor: "white", height:"100vh"}}>Loading....</div>
     }
-    console.log("render", data)
     return(
-        <div> 
-    <div style={{marginBottom: "2em"}}><Totalchart data={data} indi={"Total"} heading={"Total"} /></div>
-    <div style={{marginBottom: "2em"}}><Totalpersonality data={data[0]["data"]} heading={"Total"} /></div>
-    <div style={{marginBottom: "2em"}}><Totalchart data={data} indi={"Marvel"} heading={"Marvel"} /></div>
-    <div style={{marginBottom: "2em"}}><Totalpersonality data={data[0]["MarvelComics"]} heading={"Marvel"} /></div>
-    <div style={{marginBottom: "2em"}}><Totalchart data={data} indi={"DC"} heading={"DC"}/></div>
-    <div style={{marginBottom: "2em"}}><Totalpersonality data={data[0]["DCComics"]} heading={"DC"} /></div> 
+        <div style={{backgroundColor: "white", height:"100vh", marginTop : "-1.3em"}}> 
+            <div><Totalchart data={data} indi={"Total"} heading={"Total"} /></div>
+            <div><Totalpersonality data={data[0]["data"]} heading={"Total"} /></div>
+            <div><Totalchart data={data} indi={"Marvel"} heading={"Marvel"} /></div>
+            <div><Totalpersonality data={data[0]["MarvelComics"]} heading={"Marvel"} /></div>
+            <div><Totalchart data={data} indi={"DC"} heading={"DC"}/></div>
+            <div><Totalpersonality data={data[0]["DCComics"]} heading={"DC"} /></div> 
         </div>
     )
 }

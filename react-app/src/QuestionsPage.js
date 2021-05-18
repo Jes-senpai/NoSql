@@ -3,6 +3,7 @@ import ques from "./questions";
 import axios from "axios";
 import './questionPage.css';
 import { useHistory } from "react-router-dom";
+import "./questionPage.css";
 function QuestionsPage({nextPageData}) {
 	let history = useHistory();
     const questions =ques;
@@ -11,7 +12,7 @@ function QuestionsPage({nextPageData}) {
 	const [responseData, setResponse] =useState([]);
 	// const [score, setScore] = useState(0);
 	const [data, setData] = useState({
-        Q1:"",Q2:"",Q3:"",Q4:"",Q5:"",Q6:"",Q7:"",Q8:"",Q9:"",Q10:"",Q11:"",Q12:"",Q13:"",Q14:"",Q15:"",Q16:"",Q17:"",Q18:"",Q19:"",Q20:"",IvsE:"",NvsS:"",TvsF:"",JvsP:"",Result:"",category:""
+        Q1:"",Q2:"",Q3:"",Q4:"",Q5:"",Q6:"",Q7:"",Q8:"",Q9:"",Q10:"",Q11:"",Q12:"",Q13:"",Q14:"",Q15:"",Q16:"",Q17:"",Q18:"",Q19:"",Q20:"",IvsE:"",NvsS:"",TvsF:"",JvsP:"",Result:"",Q0:""
     });
 	const handleAnswerOptionClick = (option,index) => {
 			const value = data ;
@@ -30,43 +31,45 @@ function QuestionsPage({nextPageData}) {
 			console.log(val1);
 			if(val1>12){
 				const val = data ;
-				val["IvsE"] ="I";
+				val["IvsE"] ={type: "I", score: val1};
 				setData(val)
 			}else{
 				const val = data ;
-				val["IvsE"] ="E";
+				val["IvsE"] ={type: "E", score: val1};
 				setData(val)
 			}
 			if(val2>12){
 				const val = data ;
-				val["NvsS"] ="N";
+				val["NvsS"] ={type: "N", score: val2};
 				setData(val);
 			}else{
 				const val = data ;
-				val["NvsS"] ="S";
+				val["NvsS"] ={type: "S", score: val2};
 				setData(val);
 			}
 			if(val3>12){
 				const val = data ;
-				val["TvsF"] ="F";
+				val["TvsF"] ={type: "F", score: val3};
 				setData(val);
 			}else{
 				const val = data ;
-				val["TvsF"] ="T";
+				val["TvsF"] ={type: "T", score: val3};
 				setData(val);
 			}
 			if(val4>12){
 				const val = data ;
-				val["JvsP"] ="P";
+				val["JvsP"] ={type: "P", score: val4};
 				setData(val);
 			}else{
 				const val = data ;
-				val["JvsP"] ="J";
+				val["JvsP"] ={type: "J", score: val4};
 				setData(val);
 			}
-			var res = data.IvsE+data.NvsS+data.TvsF+data.JvsP;
+			var res = data.IvsE.type+data.NvsS.type+data.TvsF.type+data.JvsP.type;
+			var vals= val1+val2+val3+val4;
+			var rs ={type : res, score:vals};
 			const v =data;
-			v["Result"] =res
+			v["Result"] =rs
 			setData(v)
 			setShowScore(true);
 			console.log(data);
@@ -95,8 +98,8 @@ function QuestionsPage({nextPageData}) {
 		<div className='app'>
 			{showScore ? (<>
 				<div className='score-section'>
-					<p>You are an {data.Result}! :) </p><br />
-					<button2 onClick={nextPage}>Know more {">>"}</button2>
+					<p>You are an {data.Result.type}! :) </p><br />
+					<button className="button2" onClick={nextPage}>Know more {">>"}</button>
                    {/* yaha pe result dikha dena */}
 
 				</div>
@@ -114,7 +117,7 @@ function QuestionsPage({nextPageData}) {
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption,index) => (
-							<button1 key={index} onClick={() => handleAnswerOptionClick(answerOption,currentQuestion+1)}>{answerOption.answerText}</button1>
+							<button className="button1" key={index} onClick={() => handleAnswerOptionClick(answerOption,currentQuestion)}>{answerOption.answerText}</button>
 						))}
 					</div>
 				</>
