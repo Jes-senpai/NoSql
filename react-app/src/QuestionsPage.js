@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ques from "./questions";
 import axios from "axios";
+import './questionPage.css';
 import { useHistory } from "react-router-dom";
 function QuestionsPage({nextPageData}) {
 	let history = useHistory();
@@ -94,8 +95,8 @@ function QuestionsPage({nextPageData}) {
 		<div className='app'>
 			{showScore ? (<>
 				<div className='score-section'>
-					<p>You are an {data.Result} :) </p><br />
-					<button onClick={nextPage}>Know more {">>"}</button>
+					<p>You are an {data.Result}! :) </p><br />
+					<button2 onClick={nextPage}>Know more {">>"}</button2>
                    {/* yaha pe result dikha dena */}
 
 				</div>
@@ -104,13 +105,16 @@ function QuestionsPage({nextPageData}) {
 				<>
 					<div className='question-section'>
 						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
+							<span>{currentQuestion + 1}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
 					</div>
+					<div>
+
+					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption,index) => (
-							<button key={index} onClick={() => handleAnswerOptionClick(answerOption,currentQuestion+1)}>{answerOption.answerText}</button>
+							<button1 key={index} onClick={() => handleAnswerOptionClick(answerOption,currentQuestion+1)}>{answerOption.answerText}</button1>
 						))}
 					</div>
 				</>

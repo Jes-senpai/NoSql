@@ -1,0 +1,47 @@
+.app {
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 450px;
+    min-height: 200px;
+    height: min-content;
+    border-radius: 15px;
+    padding: 20px;
+    /*box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);*/
+    display: flex;
+    justify-content: center;
+    margin: 7% auto;
+    flex-direction: column;
+    padding-bottom: 5%;
+  }
+  button1{
+    width: auto;
+    font-size: 16px;
+    color: #ffffff;
+    background-color:#D60707;
+    border-radius: 10px;
+    display: grid;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 5% 20%;
+    
+  }
+  button1:hover{
+      background-color: #000;
+  }
+  body{
+    background-image: url(./Assets/QuesBGpng.png);
+  }
+  button2{
+    width: auto;
+    font-size: 16px;
+    color: #000;
+    background-color:#fff;
+    border-radius: 10px;
+    display: grid;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 1% 20%;
+  }
