@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
+    "devstart": "nodemon app.js",
     "build": "cd react-app && npm run build",
     "install-client": "cd react-app && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
