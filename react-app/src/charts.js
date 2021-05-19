@@ -12,7 +12,7 @@ const Charts = () => {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
            }
-        axios.get("http://localhost:3002/character",headers)
+        axios.get("http://localhost:5000/character",headers)
         .then((result)=>{
 			console.log(JSON.stringify(result));
             var val=data;

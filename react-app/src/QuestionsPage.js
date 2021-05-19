@@ -77,7 +77,7 @@ function QuestionsPage({nextPageData}) {
 				const headers = {
 					'Content-Type': 'application/json'
 				  }
-				axios.post("http://localhost:3002/adduser", data, {
+				axios.post("http://localhost:5000/adduser", data, {
 					headers: headers
 				}).then((result)=>{
 					console.log(result.data);

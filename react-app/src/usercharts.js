@@ -6,7 +6,7 @@ const UserCharts = () => {
     const [data,setData] =useState([])
     const [hasError, setHasError] = useState(true)
     useEffect(()=>{
-        axios.get("http://localhost:3002/user")
+        axios.get("http://localhost:5000/user")
         .then((result)=>{
 			console.log(result.data);
             var val=data;
