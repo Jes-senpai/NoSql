@@ -15,12 +15,7 @@ app.use(cors()); // to handle cross-origin errors
 app.use(express.urlencoded({extended:true})); // to make sure that we are able to access the request body.
 app.use(express.json()); 
 
-// if(process.env.NODE_ENV==="production"){
-//     app.use(express.static(path.join(__dirname,"../react-app/build")))
-//     app.get("*",(req,res)=>{
-//         res.sendFile(path.join(__dirname,"../react-app","build","index.html"))
-//     })
-// }
+
 
 mongoose.connect(dbURI,{useNewUrlParser: true,useUnifiedTopology: true})
 .then((result)=>{
@@ -56,3 +51,9 @@ app.post('/adduser', function (req, res) {
     console.log("in post request");
     
   })
+  if(process.env.NODE_ENV==="production"){
+    app.use(express.static(path.join(__dirname,"/react-app/build")))
+    app.get("*",(req,res)=>{
+        res.sendFile(path.join(__dirname,"react-app","build","index.html"))
+    })
+}

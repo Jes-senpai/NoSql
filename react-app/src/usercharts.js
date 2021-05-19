@@ -21,12 +21,14 @@ const UserCharts = () => {
     }
     console.log("render", data)
     return(
-        <div style={{backgroundColor : "white"}}> 
-            {/* {console.log("value: ",) } */}
+    <>
+        {data && <div style={{backgroundColor : "white"}}> 
             <UserTotalChart data={data[0]} /> 
             <Totalpersonality data={data[0]["type"]} /> 
             <Totalpersonality data={data[0]["category"]} /> 
-        </div>
+        </div>}
+
+    </> 
     )
 }
  

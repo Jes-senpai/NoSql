@@ -6,10 +6,15 @@ import Totalpersonality from "./chart components/totalpersonality"
 const Charts = () => {
     const [data,setData] =useState([])
     const [hasError, setHasError] = useState(true)
+    
     useEffect(()=>{
-        axios.get("http://localhost:3002/character")
+        const headers =  { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+        axios.get("http://localhost:3002/character",headers)
         .then((result)=>{
-			console.log(result.data);
+			console.log(JSON.stringify(result));
             var val=data;
             val.push(result.data);
             setData(val);
