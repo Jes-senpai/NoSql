@@ -23,9 +23,7 @@ mongoose.connect(dbURI,{useNewUrlParser: true,useUnifiedTopology: true})
         console.log(`Server is running on port ${port}...`); // Server start;
     });
 }).catch((err)=> console.log(err));
-app.get("/",(req,res)=>{
-    res.send("hi");
-})
+
 app.use('/character', characterRouter);
 app.use("/user",userRoute);
 app.use("/addCharacter",addCharacterRouter)
