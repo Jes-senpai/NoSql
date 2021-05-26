@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const demo = express.Router();
-const data = require("./data");
+const data = require("./react-app/src/data");
 const Character = require("./Models/Characters");
 demo.route("/")
 .get((req,res)=>{

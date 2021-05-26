@@ -535,6 +535,6 @@ var c =
 {ImgUrl : "https://www.personality-database.com/profile_images/101946.png" , Type : "INTJ" , Name : "Julian Day Calendar Man" , Category : "DC Comics" },
 {ImgUrl : "https://www.personality-database.com/profile_images/108375.png" , Type : "ESFP" , Name : "Kal-El Superboy-Prime" , Category : "DC Comics" },
 {ImgUrl : "https://www.personality-database.com/profile_images/2877.png" , Type : "ESFJ" , Name : "Kara Zor-El Supergirl" , Category : "DC Comics" }
-]
+];
 
 module.exports = c;
