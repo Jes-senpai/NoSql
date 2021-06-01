@@ -24,7 +24,7 @@ const UserCharts = () => {
     console.log("render", data)
     return(
     <>
-        {data && <div > 
+        {typeof data!="undefined" && data && <div > 
             <UserTotalChart data={data[0]} /> 
             <Totalpersonality data={data[0]["type"]} /> 
             <Totalpersonality data={data[0]["category"]} /> 
