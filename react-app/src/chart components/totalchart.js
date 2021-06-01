@@ -34,16 +34,16 @@ const Totalcharts = ({data,indi,heading}) => {
       },
 ]
     
-    return ( <div style={{backgroundColor : "white", color:"black", }}>
+    return ( <div style={{backgroundColor : "black", color:"white", width: "780px", margin: "2em", borderRadius :"20px" }}>
         <h1 style={{color: "black"}}>{heading}</h1>
         <BarChart
-          width={1000}
+          width={700}
           height={500}
           data={chart1}
           margin={{
             top: 0,
             right: 0,
-            left: 400,
+            left: 60,
             bottom: 5,
           }}
         >

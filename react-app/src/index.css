@@ -3,6 +3,20 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    background-image: url(./Assets/ImageBG.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 6em;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 /* {
   font-family: "Verdana", cursive, sans-serif;
@@ -17,7 +31,7 @@ body {
   min-height: 100vh;
 }*/
 
-/*.app {
+/* .app {
   background-color: #000;
   width: 450px;
   min-height: 200px;
@@ -27,9 +41,9 @@ body {
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
-}*/
+} */
 
-.score-section {
+/* .score-section {
   display: flex;
   flex-direction: column;
   font-size: 24px;
@@ -39,7 +53,6 @@ body {
   margin: 5% 5%;
 }
 
-/* QUESTION/TIMER/LEFT SECTION */
 .question-section {
 padding: 2%;
 font-family: "Verdana", cursive, sans-serif;
@@ -58,11 +71,10 @@ font-family: "Verdana", cursive, sans-serif;
 
 .question-text {
   width: 100%;
-  /*margin: 5% 5%;  */
   font-size: 25px;
   margin-bottom: 5%;
   text-overflow: clip;
-}
+} */
 
 /*.timer-text {
   background: rgb(230, 153, 12);
@@ -108,7 +120,7 @@ font-family: "Verdana", cursive, sans-serif;
   background-color: #555e7d;
 }*/
 
-button:focus {
+/* button:focus {
   outline: none;
 }
 
@@ -127,4 +139,4 @@ button svg {
     align-items: center;
     cursor: pointer;
     margin: 5% 20%;
-}
+} */

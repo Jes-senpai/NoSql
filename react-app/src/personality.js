@@ -28,24 +28,26 @@ const useStyles = makeStyles((theme) => ({
     
   }));
 const Personality = ({data}) => {
-    const [spacing, setSpacing] = React.useState(2);
+    // const [spacing, setSpacing] = React.useState(2);
     const classes = useStyles();
     return ( 
         <div>
             {console.log(data)}
             <div>
-            {data && data[0].map((elem,index)=>{
-                return <div key={index} className={classes.bodyDiv} align="center">                   
-                       <Grid className={classes.cards} md={4}>
+            
+                 <Grid  container className={classes.bodyDiv} align="center">  
+                {data && data[0].map((elem,index)=>{                 
+                       return <Grid item key={index} className={classes.cards} md={3}>
                             <Paper className={classes.cardBG}>                      
                              <div className={classes.cont}>
                              <img src={elem.ImgUrl} alt={elem.Name} className={classes.img}/>                           
                               <p className={classes.names}>{elem.Name}</p>
                              </div>
                             </Paper>
-                        </Grid>                          
-                </div>
-             })}
+                        </Grid>   
+                      })}                       
+                </Grid>
+             
             </div>
         </div>
      );

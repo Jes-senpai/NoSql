@@ -1,21 +1,34 @@
 import { Link } from "react-router-dom";
 import './home.css';
-/*const Home = () => {
-    return ( 
-        <div className='bod'>
-            <div><Link to ="/test"><button>Get started</button></Link></div>
-        </div>
-        
-     );
-}
-export default Home;*/
-
-
+import {motion} from "framer-motion"
 function Home(){
+    const bgstyle ={
+        textAlign: "left", color : "#FFFFFF", padding :"3em", margin :"3em",borderRadius :"20px", marginTop: "10em",
+        backgroundColor : "rgba(0, 0, 0, 0.5)", height: "max-content"
+    }
     return(
-        <div className='bod'>
-            <div><Link to ="/test"><button>Get started</button></Link></div>
-        </div>
+        <motion.div 
+        initial={{y:-500}}
+        animate={{y: -10}}
+        style={bgstyle}>
+                <motion.div
+                animate={{fontSize :"80px"}} 
+                >Find Your</motion.div> 
+                <motion.div
+                animate={{fontSize :"80px"}} 
+                >Personality Match</motion.div>
+            <p >Discover the platform that lets you find your personality match among your favourite characters.<br></br>
+                So what are you waiting for?<br></br>
+                Go ahead and give your first test!
+            </p>
+            <motion.div
+            initial={{x:-1000}}
+            animate={{x:-20}}
+            whileHover={{scale :1.3}}
+            transition={{delay : 0.5}}
+            style={{textAlign : "center"}}><Link to ="/test"><button>Get started</button></Link>
+            </motion.div>
+        </motion.div>
     );
 }
 export default Home;

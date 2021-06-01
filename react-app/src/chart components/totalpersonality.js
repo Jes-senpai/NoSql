@@ -3,12 +3,12 @@ import { PieChart, Pie, Cell,LabelList } from "recharts";
 const Totalpersonality = ({data, heading}) => {
     const chart = data;
     const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042","#0088FE", "#00C49F", "#FFBB28", "#FF8042","#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-    return ( <div style={{backgroundColor :"white",}}>
-        <h1 style={{color: "black"}}>{heading}</h1>
-    <PieChart width={1000} height={700} margin={{
+    return ( <div style={{backgroundColor :"black", color:"white", textAlign: "center", width: 800, margin : "2em", borderRadius : "20px"}}>
+        <h1 style={{color: "white"}}>{heading}</h1>
+    <PieChart width={700} height={700} margin={{
             top: 0,
-            right: 50,
-            left: 300,
+            right: 0,
+            left: 0,
             bottom: 0,
           }}>
         <Pie
