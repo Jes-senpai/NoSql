@@ -43,7 +43,7 @@ const UserTotalChart = ({data}) => {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name"   >
             </XAxis>
-            <YAxis yAxisId="left" orientation="left" stroke="black" />
+            <YAxis yAxisId="left" orientation="left" stroke="white" />
             <Tooltip />
               <Legend />
             <Bar yAxisId="left" dataKey="Strongly Agree" fill="#8D0C0C"  />
