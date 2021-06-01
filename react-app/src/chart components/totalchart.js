@@ -34,7 +34,7 @@ const Totalcharts = ({data,indi,heading}) => {
       },
 ]
     
-    return ( <div style={{backgroundColor : "rgba(0,0,0,0.75)", color:"white", width: "780px", margin: "2em", borderRadius :"20px" }}>
+    return ( <div style={{backgroundColor : "rgba(0,0,0,0.75)", color:"white", width: "780px", margin: "2em", borderRadius :"20px", padding: "5%" }}>
         <h1 style={{color: "white", textAlign:"center"}}>{heading}</h1>
         <BarChart
           width={700}
@@ -49,18 +49,18 @@ const Totalcharts = ({data,indi,heading}) => {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis yAxisId="left" orientation="left" stroke="#8884d8" />
-          <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" />
+          <YAxis yAxisId="left" orientation="left" stroke="#AAAF33" />
+          <YAxis yAxisId="right" orientation="right" stroke="#0A775F" />
           <Tooltip />
             <Legend />
-          <Bar yAxisId="left" dataKey="I" fill="#8884d8" />
-          <Bar yAxisId="right" dataKey="E" fill="#82ca9d" />
-          <Bar yAxisId="left" dataKey="N" fill="#8884d8" />
-          <Bar yAxisId="right" dataKey="S" fill="#82ca9d" />
-          <Bar yAxisId="left" dataKey="T" fill="#8884d8" />
-          <Bar yAxisId="right" dataKey="F" fill="#82ca9d" />
-          <Bar yAxisId="left" dataKey="J" fill="#8884d8" />
-          <Bar yAxisId="right" dataKey="P" fill="#82ca9d" />
+          <Bar yAxisId="left" dataKey="I" fill="#AAAF33" />
+          <Bar yAxisId="right" dataKey="E" fill="#0A775F" />
+          <Bar yAxisId="left" dataKey="N" fill="#AAAF33" />
+          <Bar yAxisId="right" dataKey="S" fill="#0A775F" />
+          <Bar yAxisId="left" dataKey="T" fill="#AAAF33" />
+          <Bar yAxisId="right" dataKey="F" fill="#0A775F" />
+          <Bar yAxisId="left" dataKey="J" fill="#AAAF33" />
+          <Bar yAxisId="right" dataKey="P" fill="#0A775F" />
         </BarChart>
     </div> );
 }

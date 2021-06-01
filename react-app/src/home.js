@@ -16,9 +16,9 @@ function Home(){
                 >Find Your</motion.div> 
                 <motion.div
                 animate={{fontSize :"80px"}} 
-                >Personality Match</motion.div>
+                >Superhero Match</motion.div>
             <p >Discover the platform that lets you find your personality match among your favourite characters.<br></br>
-                So what are you waiting for?<br></br>
+                So what are you waiting for?
                 Go ahead and give your first test!
             </p>
             <motion.div
