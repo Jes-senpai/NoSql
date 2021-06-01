@@ -58,7 +58,7 @@ const ques = [
         ],
     },
     {
-        questionText: 'When working on a project, I start with the things I am naturally good at first, and them do the others',
+        questionText: 'When working on a project, I start with the things I am naturally good at first, and then do with the others',
         answerOptions: [
             { answerText: 'Strongly Agree', score: 5 },
             { answerText: 'Agree', score: 4 },
@@ -68,7 +68,7 @@ const ques = [
         ],
     },
     {
-        questionText: "I don't need need too many signs from someone to figure out that they are upset",
+        questionText: "I don't need too many signs from someone to figure out that they are upset",
         answerOptions: [
             { answerText: 'Strongly Agree', score: 5 },
             { answerText: 'Agree', score: 4 },
@@ -138,7 +138,7 @@ const ques = [
         ],
     },
     {
-        questionText: 'I want everyone to be harmonious, and it makes upset when there is a lack of harmony',
+        questionText: 'I want everyone to be harmonious, and it makes me upset when there is a lack of harmony',
         answerOptions: [
             { answerText: 'Strongly Agree', score: 5 },
             { answerText: 'Agree', score: 4 },
