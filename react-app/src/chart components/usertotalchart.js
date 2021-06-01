@@ -43,14 +43,14 @@ const UserTotalChart = ({data}) => {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name"   >
             </XAxis>
-            <YAxis yAxisId="left" orientation="left" stroke="#8884d8" />
+            <YAxis yAxisId="left" orientation="left" stroke="black" />
             <Tooltip />
               <Legend />
-            <Bar yAxisId="left" dataKey="Strongly Agree" fill="#8884d8"  />
-            <Bar yAxisId="left" dataKey="Agree" fill="#82ca9d" />
-            <Bar yAxisId="left" dataKey="Neutral" fill="#8884d8" />
-            <Bar yAxisId="left" dataKey="Disagree" fill="#82ca9d" />
-            <Bar yAxisId="left" dataKey="Strongly Disagree" fill="#8884d8" />
+            <Bar yAxisId="left" dataKey="Strongly Agree" fill="#8D0C0C"  />
+            <Bar yAxisId="left" dataKey="Agree" fill="#8D690C" />
+            <Bar yAxisId="left" dataKey="Neutral" fill="#216828" />
+            <Bar yAxisId="left" dataKey="Disagree" fill="#7A1C60" />
+            <Bar yAxisId="left" dataKey="Strongly Disagree" fill="#194397" />
           </BarChart>
           <BarChart
           width={1000}
@@ -66,14 +66,14 @@ const UserTotalChart = ({data}) => {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name"   >
             </XAxis>
-            <YAxis yAxisId="left" orientation="left" stroke="#8884d8" />
+            <YAxis yAxisId="left" orientation="left" stroke="white" />
             <Tooltip />
               <Legend />
-            <Bar yAxisId="left" dataKey="Strongly Agree" fill="#8884d8"  />
-            <Bar yAxisId="left" dataKey="Agree" fill="#82ca9d" />
-            <Bar yAxisId="left" dataKey="Neutral" fill="#8884d8" />
-            <Bar yAxisId="left" dataKey="Disagree" fill="#82ca9d" />
-            <Bar yAxisId="left" dataKey="Strongly Disagree" fill="#8884d8" />
+            <Bar yAxisId="left" dataKey="Strongly Agree" fill="#8D0C0C"  />
+            <Bar yAxisId="left" dataKey="Agree" fill="#8D690C" />
+            <Bar yAxisId="left" dataKey="Neutral" fill="#216828" />
+            <Bar yAxisId="left" dataKey="Disagree" fill="#7A1C60" />
+            <Bar yAxisId="left" dataKey="Strongly Disagree" fill="#194397" />
           </BarChart>
     </div> );
 }
