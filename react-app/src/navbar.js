@@ -15,20 +15,23 @@ const useStyles = makeStyles((theme) => ({
 
     link:{
         textDecoration:"none",
-        color:"black"
+        color:"white"
     },
     root: {
       flexGrow: 1,
     },
     p:{
       padding: "2em"  
+    },
+    AppBarStyle:{
+      background: "rgba(0,0,0,0.75)",
     }
   }));
 function Navbar() {
     const classes = useStyles();
     return (
         <div>
-            <AppBar  color="primary" elevation={5} position="fixed">
+            <AppBar  color="primary" elevation={5} position="fixed" className={classes.AppBarStyle}>
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
                     </Typography>

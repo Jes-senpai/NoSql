@@ -28,7 +28,7 @@ const UserTotalChart = ({data}) => {
         obj["name"]= "Question"+i
         chart2.push(obj);
     }
-    return ( <div style={{backgroundColor : "black", color:"black", width: "1050px", margin: "2em", borderRadius :"20px" }}>
+    return ( <div style={{backgroundColor : "rgba(0,0,0,0.75)", color:"white", width: "1050px", margin: "2em", borderRadius :"20px" }}>
           <BarChart
            width={1000}
            height={500}

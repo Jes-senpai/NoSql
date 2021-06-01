@@ -3,13 +3,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-    background-image: url(./Assets/ImageBG.png);
+    background-image: url(./Assets/QuesBGpng.png);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     margin-top: 6em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 body::-webkit-scrollbar {
   display: none;

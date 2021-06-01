@@ -3,7 +3,7 @@ import { PieChart, Pie, Cell,LabelList } from "recharts";
 const Totalpersonality = ({data, heading}) => {
     const chart = data;
     const COLORS = ["#8D0C0C","#8D690C","#216828","#7A1C60","#194397","#8D0C0C","#8D690C","#216828","#7A1C60","#194397","#8D0C0C","#8D690C","#216828","#7A1C60","#194397","#8D0C0C","#8D690C","#216828","#7A1C60","#194397"];
-    return ( <div style={{backgroundColor :"black", color:"white", textAlign: "center", width: 800, margin : "2em", borderRadius : "20px"}}>
+    return ( <div style={{backgroundColor :"rgba(0,0,0,0.75)", color:"white", textAlign: "center", width: 800, margin : "2em", borderRadius : "20px"}}>
         <h1 style={{color: "white"}}>{heading}</h1>
     <PieChart width={700} height={700} margin={{
             top: 0,
@@ -23,7 +23,7 @@ const Totalpersonality = ({data, heading}) => {
         >
             <LabelList dataKey="_id" position="Inside" fontSize={12} />
             {chart.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} stroke={"black"} name={chart.type} />
+            <Cell key={`cell-${index}`} stroke={"black"} fill={COLORS[index % COLORS.length]}  name={chart.type} />
             ))}
         </Pie>
       </PieChart>

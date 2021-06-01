@@ -102,7 +102,17 @@ function QuestionsPage({nextPageData}) {
 		<div className='app'>
 			{showScore ? (<>
 				<div className='score-section'>
-					<p>You are an {data.Result.type}! :) </p><br />
+					<p>You are an {data.Result.type}! :) </p>
+					<br />
+					<p>The Myers Briggs Type Indicator (or MBTI for short) is a personality type system that divides everyone into 16 distinct personality types across 4 axis:
+							<br/>
+							<br/>
+							Introversion (I) – Extroversion (E) <br/>
+							Intuition (N) – Sensing (S)<br/>
+							Thinking (T) – Feeling (F)<br/>
+							Judging (J) – Perceiving (P)
+					</p>
+					<br/>
 					{!hasError && <motion.button 
 					initial={{x:-1000}}
 					animate={{x:-10}}

@@ -19,9 +19,10 @@ const useStyles = makeStyles((theme) => ({
       padding: "50px 50px 45px 50px",
     },
     cardBG:{
-        backgroundColor: "white",
+        backgroundColor: "rgba(0,0,0,0.75)",
     },
     names:{
+      color: "white",
       padding:"0px 50px 50px 50px",
       fontSize: "25px"
     },

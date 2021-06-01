@@ -13,13 +13,13 @@
     padding-bottom: 5%;
   } */
   .app {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
   width: 800px;
   min-height: max-content;
   height: min-content;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  
   display: flex;
   justify-content: space-evenly;
   margin: 10% auto;
@@ -44,8 +44,8 @@
   .button2{
     width: auto;
     font-size: 16px;
-    color: #000;
-    background-color:#fff;
+    color: #fff;
+    background-color:#D60707;
     border-radius: 10px;
     display: grid;
     padding: 20px;

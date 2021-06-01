@@ -4,7 +4,7 @@ import {motion} from "framer-motion"
 function Home(){
     const bgstyle ={
         textAlign: "left", color : "#FFFFFF", padding :"3em", margin :"3em",borderRadius :"20px", marginTop: "10em",
-        backgroundColor : "rgba(0, 0, 0, 0.5)", height: "max-content"
+        backgroundColor : "rgba(0, 0, 0, 0.75)", height: "max-content"
     }
     return(
         <motion.div 
