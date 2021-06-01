@@ -55,7 +55,7 @@ const UserTotalChart = ({data}) => {
           <BarChart
           width={1000}
           height={500}
-           data={chart1}
+           data={chart2}
            margin={{
              top: 50,
              right: 0,
